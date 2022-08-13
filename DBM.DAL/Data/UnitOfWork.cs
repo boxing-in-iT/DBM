@@ -9,7 +9,7 @@ namespace DBM.DAL.Data
 		private readonly AppDbContext _appDbContext;
 
         public IMovieRepository MovieRepository { get; }
-		public IPhotoRepository PhotoRepository { get; }
+		//public IPhotoRepository PhotoRepository { get; }
 
 		public async Task SaveChangesAsync()
         {
@@ -18,12 +18,12 @@ namespace DBM.DAL.Data
 
 		public UnitOfWork(
 			AppDbContext appDbContext,
-			IMovieRepository movieRepository,
-			IPhotoRepository photoRepository)
+			IMovieRepository movieRepository)
+			//IPhotoRepository photoRepository)
 		{
 			_appDbContext = appDbContext;
 			MovieRepository = movieRepository;
-			PhotoRepository = photoRepository;
+			//PhotoRepository = photoRepository;
 		}
 	}
 }
